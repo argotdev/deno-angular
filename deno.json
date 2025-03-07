@@ -1,0 +1,44 @@
+{
+    "name": "deno-angular",
+    "version": "0.0.0",
+    "exports": "./src/main.ts",
+    "tasks": {
+      "dev": "deno run -A ng",
+      "start": "deno run -A ng serve",
+      "build": "deno run -A ng build",
+      "test": "deno run -A ng test"
+    },
+    "imports": {
+      "@angular/animations": "npm:@angular/animations@19.1.0",
+      "@angular/common": "npm:@angular/common@19.1.0",
+      "@angular/compiler": "npm:@angular/compiler@19.1.0",
+      "@angular/core": "npm:@angular/core@19.1.0",
+      "@angular/forms": "npm:@angular/forms@19.1.0",
+      "@angular/platform-browser": "npm:@angular/platform-browser@19.1.0",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@19.1.0",
+      "@angular/router": "npm:@angular/router@19.1.0",
+      "rxjs": "npm:rxjs@7.8.0",
+      "tslib": "npm:tslib@2.3.0",
+      "zone.js": "npm:zone.js@0.15.0"
+    },
+    "compilerOptions": {
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "jsx": "react",
+      "strict": true,
+      "target": "esnext",
+      "module": "esnext",
+      "moduleResolution": "bundler",
+      "types": ["./types.d.ts"]
+    },
+    "lint": {
+      "include": ["**/*.ts"],
+      "exclude": ["build/", "node_modules/"]
+    },
+    "fmt": {
+      "include": ["**/*.ts", "**/*.json"],
+      "exclude": ["build/", "node_modules/"]
+    },
+    "test": {
+      "include": ["**/*_test.ts"]
+    }
+  }
